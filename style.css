@@ -37,7 +37,7 @@ ul{
     justify-content: space-between;
     background-color: #000;
     color: #fff;
-    padding: 15px 0;
+    padding: 5px 0;
     position: sticky;
     top: 0;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);    
@@ -81,13 +81,15 @@ ul{
     position: fixed;
     background-color: var(--black);
     overflow: hidden;
-    flex-direction: column;    
+    flex-direction: column;
+    margin-top: 85px;    
 }
 
 .menu a{
     display: block;
     padding: 40px;
     color: #f8f9fa;
+    
 }
 
 .menu a:hover{
@@ -146,7 +148,7 @@ ul{
 
 .side-menu:checked ~ nav{
     max-height: 100%;
-    margin-top: 80px;
+    
 }
 
 .side-menu:checked ~ .hamb .hamb-line {
@@ -169,17 +171,29 @@ ul{
     -moz-background-size: cover;
     background-size: cover;
     min-height: 100%;
-    color: white; 
-    text-shadow: -1px -1px 0 #222, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    color: white;
     background-position: center;
     padding: 100px 0;
     text-align: center;
+    position: relative
+}
+
+.hero::before {
+    content: "";/* background-image: url('images/background.jpg'); */
+    background-color: rgba(0, 0, 0, 0.650);
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.9;
 }
 
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 20px;
     font-weight: 300;
+    position: relative;
 }
 
 .hero p {
@@ -187,7 +201,10 @@ ul{
     max-width: 700px;
     margin: 0 auto 30px;
     opacity: 0.9;
+    position: relative;
 }
+
+
 
 .btn {
     display: inline-block;
@@ -199,6 +216,7 @@ ul{
     font-weight: 500;
     transition: background-color 0.3s;
     text-shadow: none;
+    position: relative;
 }
 
 .btn:hover {
@@ -208,13 +226,13 @@ ul{
 
 /* Разделы */
 section {
-    padding: 80px 0;
+    padding: 30px 0;
 }
 
 section h2 {
     text-align: center;
     font-size: 2.2rem;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     font-weight: 300;
     color: #222;
 }
@@ -263,7 +281,7 @@ section h2 {
 
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 30px;
 }
 
@@ -420,7 +438,7 @@ footer {
 
 /* Адаптивность */
 
-@media (min-width: 768px) {
+@media (min-width: 855px) {
     .nav{
         max-height: none;
         top: 0;
@@ -428,7 +446,7 @@ footer {
         float: right;
         width: fit-content;
         background-color: transparent;
-
+        margin: 0;
     }
 
     .menu li{
