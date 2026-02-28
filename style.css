@@ -150,7 +150,6 @@ ul{
 
 
 /* Вызов меню */
-
 .side-menu:checked ~ nav{
     max-height: 100%;
     
@@ -171,27 +170,22 @@ ul{
 }
 
 .hero {
-    background-image: url("images/background.jpg");
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    min-height: 100%;
-    color: white;
-    background-position: center;
-    padding: 100px 0;
-    text-align: center;
-    position: relative
+  position: relative;
+  padding: 100px 0;
+  text-align: center;
+  color: white;
+  overflow: hidden;
 }
 
 .hero::before {
-    content: "";
-    background-color: rgba(0, 0, 0, 0.650);
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    opacity: 0.9;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: -1;
 }
 
 .hero h1 {
@@ -209,7 +203,35 @@ ul{
     position: relative;
 }
 
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
 
+#hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Скрытие для мобилок */
+/* @media (max-width: 768px) {
+  .video-background {
+    display: none; 
+  }
+  
+  .hero {
+    background-image: url("images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+  }
+} */
 
 .btn {
     display: inline-block;
@@ -448,7 +470,6 @@ footer {
 
 
 /* Адаптивность */
-
 @media (min-width: 855px) {
     .nav{
         max-height: none;
