@@ -19,6 +19,7 @@ body{
 
 a{
     text-decoration: none;
+    color: #000;
 }
 
 ul{
@@ -208,11 +209,13 @@ ul{
 
 .btn {
     display: inline-block;
-    background-color: #4a9eff;
+    background-color: #000000;
     color: white;
     padding: 12px 30px;
     text-decoration: none;
     border-radius: 3px;
+    border-color: #4a9eff;
+    border-width: 0;
     font-weight: 500;
     transition: background-color 0.3s;
     text-shadow: none;
@@ -220,7 +223,7 @@ ul{
 }
 
 .btn:hover {
-    background-color: #000000;
+    background-color: #4a9eff;
 }
 
 
@@ -346,8 +349,12 @@ section h2 {
     align-items: center;
     justify-content: center;
     margin-right: 15px;
+    color: #000;
+    font-size: 1.6rem;
+}
+
+.contact-telegram:hover {
     color: #4a9eff;
-    font-size: 1.2rem;
 }
 
 .contact-details h3 {
@@ -426,7 +433,7 @@ footer {
 }
 
 .social-links a {
-    color: white;
+    color: #000;
     font-size: 3em;
     transition: color 0.3s;
 }
