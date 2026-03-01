@@ -4,6 +4,10 @@ $to = 'info@northwestmedia.ru';
 $subject = 'Новая заявка с сайта NorthWest Media';
 $from = 'info@northwestmedia.ru';
 
+$mail->isHTML(true);
+$mail->CharSet = 'UTF-8';
+$mail->Port = 587;
+
 // Получаем данные из формы
 $name = htmlspecialchars($_POST['name'] ?? '');
 $phone = htmlspecialchars($_POST['phone'] ?? '');
