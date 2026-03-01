@@ -1,4 +1,30 @@
 <?php
+
+function validatePhone($phone) {
+    // Удаляем все нецифровые символы (кроме + в начале)
+    $cleaned = preg_replace('/[^\d+]/', '', $phone);
+    
+    // Проверяем, что номер начинается с +7 или 8
+    if (!preg_match('/^(\+7|8)/', $cleaned)) {
+        return false;
+    }
+    
+    // Заменяем 8 на +7 для единообразия
+    if (strpos($cleaned, '8') === 0) {
+        $cleaned = '+7' . substr($cleaned, 1);
+    }
+    
+    // Убираем + для подсчёта цифр
+    $digitsOnly = ltrim($cleaned, '+');
+    
+    // Проверяем длину (11 цифр для РФ: 7 + 10 цифр)
+    if (strlen($digitsOnly) !== 11) {
+        return false;
+    }  
+    return $cleaned;
+}
+
+// Отправка формы
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Allow-Headers: Content-Type");
@@ -14,6 +40,10 @@ $message = htmlspecialchars($_POST['message'] ?? '');
 // Валидация
 if (empty($name) || empty($phone)) {
     throw new Exception('Заполните обязательные поля');
+}
+$validatedPhone = validatePhone($phone);
+if (!$validatedPhone) {
+    throw new Exception('Введите корректный номер телефона (пример: +7 (999) 123-45-67)');
 }
 
 // Настройки почты

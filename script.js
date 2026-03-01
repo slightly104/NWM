@@ -9,11 +9,25 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+function validatePhoneInput(phone) {
+    const phoneRegex = /^(\+7|8)[\d\s\-\(\)]{10,15}$/;
+    return phoneRegex.test(phone.trim());
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('contactForm');
     
     form.addEventListener('submit', function(e) {
         e.preventDefault();
+        
+        const phoneInput = document.getElementById('phone');
+        const phoneValue = phoneInput.value.trim();
+        
+        if (!validatePhoneInput(phoneValue)) {
+            alert('Введите корректный номер телефона (пример: +7 999 123-45-67)');
+            phoneInput.focus();
+            return;
+        }
         
         const formData = new FormData(form);
         

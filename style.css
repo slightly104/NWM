@@ -45,7 +45,7 @@ ul{
     padding: 5px 0;
     position: sticky;
     top: 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);    
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     width: 100%;
     z-index: 1000;
 }
@@ -293,7 +293,7 @@ section h2 {
     flex: 1;
     border-radius: 5px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: none;
 }
 
 .about-image img {
