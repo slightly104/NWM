@@ -349,15 +349,20 @@ section h2 {
 /* Контакты */
 .contacts-content {
     display: flex;
-    gap: 50px;
+    gap: 60px; 
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
-.contact-info {
-    flex: 1;
+.contacts-info {
+    flex: 0 1 auto;
+    max-width: 45%;
 }
 
-.contact-form {
-    flex: 1;
+.contact-form-wrapper {
+    flex: 1 1 50%;
+    min-width: 0;
+    max-width: 50%;
 }
 
 .contact-item {
@@ -511,11 +516,32 @@ footer {
 }
 
 @media (max-width: 992px) {
-    .about-content, .contacts-content {
+    .about-content {
         flex-direction: column;
+    }
+
+    .contacts-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .contacts-info,
+    .contact-form-wrapper {
+        width: 100%;
+        max-width: 100%;
     }
     
     .hero h1 {
         font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contacts-content {
+        gap: 20px;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
     }
 }

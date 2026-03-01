@@ -81,7 +81,7 @@
                     <p>Наша команда профессионалов готова предложить индивидуальные решения для каждого клиента, от проектирования до установки и технического обслуживания.</p>
                 </div>
                 <div class="about-image">
-                    <img src="images\—Pngtree—vector team icon_4187203.png" alt="Производство LED экранов">
+                    <img src="images\о комп 3 (2).png" alt="Производство LED экранов">
                 </div>
             </div>
         </div>
@@ -143,7 +143,7 @@
         <div class="container">
             <h2>Контакты</h2>
             <div class="contacts-content">
-                <div class="contact-info">                    
+                <div class="contacts-info">
                     <div class="contact-item">
                         <div class="contact-icon">
                             <i class="fas fa-phone"></i>
@@ -164,8 +164,6 @@
                             </div>
                         </div>
                     </a>
-                    
-
                     <div class="contact-item">
                         <div class="contact-icon">
                             <i class="fas fa-envelope"></i>
@@ -175,7 +173,6 @@
                             <p>info@northwestmedia.ru</p>
                         </div>
                     </div>
-                    
                     <div class="contact-item">
                         <div class="contact-icon">
                             <i class="fas fa-clock"></i>
@@ -186,26 +183,23 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="contact-form">
+
+                <div class="contact-form-wrapper">
                     <form id="contactForm" action="send-form.php" method="POST">
                         <div class="form-group">
                             <label for="name">Ваше имя</label>
-                            <input type="text" id="name" name="name" class="form-control" required>
-                            <div id="nameError" class="error-message" style="display: none; color: #e74c3c; font-size: 0.9rem; margin-top: 5px;"></div>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Имя">
+                            <div id="nameError" class="error-message" style="display: none;"></div>
                         </div>
-                        
                         <div class="form-group">
                             <label for="phone">Телефон</label>
-                            <input type="tel" id="phone" name="phone" class="form-control" placeholder="+7 (921) 123-45-67" required>
-                            <div id="phoneError" class="error-message" style="display: none; color: #e74c3c; font-size: 0.9rem; margin-top: 5px;"></div>
+                            <input type="tel" id="phone" name="phone" class="form-control" placeholder="+7 (921) 123-45-67">
+                            <div id="phoneError" class="error-message" style="display: none;"></div>
                         </div>
-                        
                         <div class="form-group">
                             <label for="message">Сообщение</label>
                             <textarea id="message" name="message" class="form-control" placeholder="Комментарий"></textarea>
                         </div>
-                        
                         <button type="submit" class="btn">Отправить заявку</button>
                     </form>
                 </div>
