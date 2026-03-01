@@ -2,7 +2,7 @@
 // Настройки
 $to = 'info@northwestmedia.ru';
 $subject = 'Новая заявка с сайта NorthWest Media';
-$from = 'noreply@your-domain.ru';
+$from = 'info@northwestmedia.ru';
 
 // Получаем данные из формы
 $name = htmlspecialchars($_POST['name'] ?? '');
