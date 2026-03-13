@@ -11,10 +11,7 @@
     <script src="script.js"></script>
 </head>
 <body>
-    <!-- Шапка сайта -->
     <header class="header">
-
-        <!-- Логотип -->
         <div class="logo">
             <a href="#" class="logo"><img src="images/northwest media.png" class="logo-img" alt="Логотип"></a>
             <div class="logo-text">
@@ -23,11 +20,9 @@
             </div>
         </div>
 
-        <!-- Иконка меню -->
         <input class="side-menu" type="checkbox" id="side-menu">
         <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
 
-        <!-- Меню -->
         <nav class="nav">
             <ul class="menu">
                 <li>
@@ -53,29 +48,26 @@
         </nav>
     </header>
 
-    <!-- Главный баннер -->
     <section class="hero">
         <div class="video-background">
             <video autoplay muted loop playsinline id="hero-video">
                 <source src="videos/lv_0_20260228195919.mp4" type="video/mp4">
-                <!-- Резервное изображение, если видео не загрузилось -->
                 <img src="images/background.jpg" alt="Фон">
             </video>
         </div>
         <div class="container">
-            <h1>Производство и монтаж LED экранов</h1>
+            <h1>Производство<br>и монтаж<br>LED-экранов</h1>
             <p>Современные решения для рекламы и узнаваемости вашего бизнеса. Проектируем, производим и устанавливаем LED-экраны любой сложности.</p>
             <a href="#contacts" class="btn">Связаться с нами</a>
         </div>
     </section>
 
-    <!-- О компании -->
     <section id="about">
         <div class="container">
             <h2>О компании</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <h3>NorthWest Media — ваш партнер в области LED технологий</h3>
+                    <h3>NorthWest Media — ваш партнер в области LED-технологий</h3>
                     <p>Мы специализируемся на производстве и монтаже LED-экранов для различных целей. Наша компания работает на рынке более 5 лет, реализовав множество проектов по всему северо-западу РФ.</p>
                     <p>Мы используем только качественные комплектующие от проверенных поставщиков, что гарантирует долговечность и яркость наших экранов в любых условиях эксплуатации.</p>
                     <p>Наша команда профессионалов готова предложить индивидуальные решения для каждого клиента, от проектирования до установки и технического обслуживания.</p>
@@ -87,39 +79,49 @@
         </div>
     </section>
 
-    <!-- Наши работы -->
     <section id="portfolio" class="portfolio">
         <div class="container">
             <h2>Примеры выполненных работ</h2>
             <div class="portfolio-grid">
                 <div class="portfolio-item">
-                    <img src="images\IMG_20260213_234034_900.jpg" alt="LED экран в торговом центре">
+                    <img src="images\IMG_20260313_183439_105.jpg" class="gallery-image" style="cursor: pointer;" alt="LED экран в торговом центре">
                     <div class="portfolio-item-content">
                         <h3>СПб</h3>
-                        <p>ТРК "ЛЕТО", Koton</p>
+                        <p>Манчестерская 5, Магазин "Цветы Стихи"</p>
+                        <br>
+                        <p>Металлоконструкция, шаг пикселя - p2,5, 1600×960 мм</p>
+                        <br>
+                        <p>80 000 рублей</p>
                     </div>
                 </div>
                 
                 <div class="portfolio-item">
-                    <img src="images\IMG_20260213_234041_169(1).jpg" alt="Псков">
+                    <img src="images\IMG_20260313_183431_593.jpg" class="gallery-image" style="cursor: pointer;" alt="Псков">
                     <div class="portfolio-item-content">
                         <h3>Псков</h3>
                         <p>Псковский государственный университет, Институт промышленных технологий и дизайна</p>
+                        <br>
+                        <p>Кабинеты, шаг пикселя - p2, 4480×2560 мм</p>
+                        <br>
+                        <p>750 000 рублей</p>
                     </div>
                 </div>
                 
                 <div class="portfolio-item">
-                    <img src="images\IMG_20260213_234044_392.jpg" alt='ТЦ \"Галерея\"'>
+                    <img src="images\IMG_20260313_183437_037.jpg" class="gallery-image" style="cursor: pointer;" alt='ТЦ \"Галерея\"'>
                     <div class="portfolio-item-content">
                         <h3>СПб</h3>
                         <p>ТЦ "Галерея", Belle you</p>
+                        <br>
+                        <p>Металлоконструкция, шаг пикселя - p2, 3040×1280 мм</p>
+                        <br>
+                        <p>350 000 рублей</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Услуги -->
     <section id="services">
         <div class="container">
             <h2>Наши услуги</h2>
@@ -138,7 +140,6 @@
         </div>
     </section>
 
-    <!-- Контакты -->
     <section id="contacts">
         <div class="container">
             <h2>Контакты</h2>
@@ -207,7 +208,6 @@
         </div>
     </section>
 
-    <!-- Футер -->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -223,6 +223,14 @@
             </div>
         </div>
     </footer>
+
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content">
+            <img id="modalImage" src="" alt="Увеличенное изображение">
+        </div>
+    </div>
+
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -243,7 +251,6 @@
                 }
             });
         });
-    </script>
-   
+    </script>   
 </body>
 </html>
